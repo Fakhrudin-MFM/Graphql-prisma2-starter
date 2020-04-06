@@ -1,0 +1,14 @@
+type Movies {
+  id: Int!
+  name: String!
+  score: Int!
+}
+
+type Query {
+  movies: [Movies]!
+  movie(id: Int!): Movies
+}
+
+type Mutation {
+  createUser: Boolean!
+}

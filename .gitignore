@@ -1,0 +1,10 @@
+.env*
+dist
+package-lock.json
+node_modules
+.idea
+.vscode
+*.log
+yarn.lock
+
+prisma/docker-compose.local.yml

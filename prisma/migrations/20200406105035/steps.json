@@ -1,0 +1,164 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateModel",
+      "model": "p2_posts"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_posts",
+      "field": "author_id",
+      "type": "p2_users",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_posts",
+      "field": "content",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_posts",
+      "field": "created_at",
+      "type": "DateTime",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_posts",
+      "field": "post_id",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "p2_posts",
+          "field": "post_id"
+        },
+        "directive": "id"
+      }
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_posts",
+      "field": "title",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateModel",
+      "model": "p2_profiles"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_profiles",
+      "field": "bio",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_profiles",
+      "field": "profile_id",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "p2_profiles",
+          "field": "profile_id"
+        },
+        "directive": "id"
+      }
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_profiles",
+      "field": "user_id",
+      "type": "p2_users",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateModel",
+      "model": "p2_users"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_users",
+      "field": "email",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "p2_users",
+          "field": "email"
+        },
+        "directive": "unique"
+      }
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_users",
+      "field": "name",
+      "type": "String",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_users",
+      "field": "user_id",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "p2_users",
+          "field": "user_id"
+        },
+        "directive": "id"
+      }
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_users",
+      "field": "postses",
+      "type": "p2_posts",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateField",
+      "model": "p2_users",
+      "field": "profileses",
+      "type": "p2_profiles",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteModel",
+      "model": "posts"
+    },
+    {
+      "tag": "DeleteModel",
+      "model": "profiles"
+    },
+    {
+      "tag": "DeleteModel",
+      "model": "users"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "prisma2-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^2.0.0-beta.1",
+    "graphql-yoga": "^1.18.3",
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.0.0-beta.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0"
+  }
+}
